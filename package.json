@@ -1,0 +1,13 @@
+{
+  "name": "motimize-heroku",
+  "version": "0.0.0",
+  "description": "Motimize is open sourced image optimizer web service.",
+  "license": "MIT",
+  "dependencies": {
+    "motimize": "https://github.com/motivast/motimize/releases/download/0.0.0/motimize-0.0.0.tar.gz"
+  },
+  "engines": {
+    "node": "8.9.4",
+    "npm": "5.6.0"
+  }
+}

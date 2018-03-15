@@ -1,0 +1,40 @@
+{
+  "name": "Motimize",
+  "description": "Motimize is open sourced image optimizer web service.",
+  "repository": "https://github.com/motivast/motimize-heroku",
+  "keywords": ["node", "express"],
+  "engines": {
+    "node": "8.9.x",
+    "yarn": "1.9.x"
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql:hobby-dev"
+    },
+    {
+      "plan": "heroku-redis:hobby-dev"
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-apt"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "URL": {
+      "description": "Url address of applciation. If you name your application e.g. foo-bar your application url will be https://foo-bar.herokuapp.com",
+      "value": ""
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    },
+    "worker": {
+      "quantity": 1
+    }
+  }
+}
